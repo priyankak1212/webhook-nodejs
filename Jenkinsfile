@@ -18,6 +18,16 @@ pipeline {
       steps {
          sh 'npm test'
       }
-    }    
+    }  
+    stage('Build docker image') {
+      steps {
+         sh 'docker build -t priyankak1212/calculator Dockerfile .'
+      }
+    } 
+     stage('Run docker image') {
+      steps {
+         sh 'docker run -d -p 5050:7070 priyankak1212/calculator -it /bin/bash'
+      }
+    } 
   }
 }
