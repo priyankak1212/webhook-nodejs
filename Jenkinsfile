@@ -4,7 +4,7 @@ pipeline {
         
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/AnandPatelMSFT/Calculator.git'
+        git 'https://github.com/priyankak1212/Calculator.git'
       }
     }
  
